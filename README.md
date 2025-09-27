@@ -1,0 +1,150 @@
+** start of index.html **
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Job Application Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 500px;
+      margin: 0 auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    label {
+      display: block;
+      margin: 10px 0 5px;
+      font-weight: bold;
+    }
+
+    input, select, textarea, button {
+      width: 100%;
+      padding: 8px;
+      margin-bottom: 15px;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 14px;
+    }
+
+    /* 11. Focus pseudo-class */
+    input:focus, textarea:focus {
+      border-color: #007bff;
+      outline: none;
+    }
+
+    /* 12. Invalid pseudo-class */
+    input:invalid, select:invalid, textarea:invalid {
+      border-color: red;
+    }
+
+    /* 13. Valid pseudo-class */
+    input:valid, select:valid, textarea:valid {
+      border-color: green;
+    }
+
+    /* 14. Hover effect on button */
+    button:hover {
+      background-color: #007bff;
+      color: #fff;
+      cursor: pointer;
+    }
+
+    /* 15,16,17. Radio checked style */
+    .radio-group input[type="radio"]:checked {
+      border: 2px solid #007bff;
+      background-color: #eaf3ff;
+      box-shadow: 0 0 5px #007bff;
+    }
+
+    /* 18. Label color change when radio checked */
+    .radio-group input[type="radio"]:checked + label {
+      color: #007bff;
+    }
+
+    /* 19. First input special style */
+    input:first-of-type {
+      border-radius: 20px;
+      background-color: #f9f9f9;
+    }
+
+    fieldset.radio-group {
+      border: none;
+      margin-bottom: 15px;
+    }
+
+    .radio-option {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+
+    .radio-option input {
+      width: auto;
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <form>
+      <!-- Full Name -->
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required>
+
+      <!-- Email -->
+      <label for="email">Email Address:</label>
+      <input type="email" id="email" name="email" required>
+
+      <!-- Job Position -->
+      <label for="position">Select Position:</label>
+      <select id="position" name="position" required>
+        <option value="" disabled selected>Select a position</option>
+        <option value="developer">Web Developer</option>
+        <option value="designer">UI/UX Designer</option>
+        <option value="manager">Project Manager</option>
+      </select>
+
+      <!-- Availability -->
+      <fieldset class="radio-group">
+        <legend>Availability:</legend>
+        <div class="radio-option">
+          <input type="radio" id="fulltime" name="availability" value="Full-Time" required>
+          <label for="fulltime">Full-Time</label>
+        </div>
+        <div class="radio-option">
+          <input type="radio" id="parttime" name="availability" value="Part-Time">
+          <label for="parttime">Part-Time</label>
+        </div>
+      </fieldset>
+
+      <!-- Message -->
+      <label for="message">Message:</label>
+      <textarea id="message" name="message" rows="4" required></textarea>
+
+      <!-- Submit Button -->
+      <button type="submit">Submit Application</button>
+    </form>
+  </div>
+</body>
+</html>
+
+
+** end of index.html **
+
+** start of styles.css **
+
+
+
+** end of styles.css **
+
